@@ -9,7 +9,7 @@ public class ContaEspecial extends Conta {
         this.limite = limite;
     }
 
-    private boolean temSaldo(double valor) {
+    protected boolean temSaldo(double valor) {
         if (valor > this.getSaldo() + limite)
             return false;
 
@@ -20,8 +20,8 @@ public class ContaEspecial extends Conta {
 
     }
 
-    public ContaEspecial(Pessoa cliente, int nrConta, double saldo, double limite) {
-        super(cliente, nrConta, saldo);
+    public ContaEspecial(Pessoa cliente, int nrConta, double saldo, double limite, String tipoConta) {
+        super(cliente, nrConta, saldo, tipoConta);
         this.limite = limite;
     }
 }

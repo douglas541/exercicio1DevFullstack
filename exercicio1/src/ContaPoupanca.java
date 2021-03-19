@@ -10,15 +10,15 @@ public class ContaPoupanca extends Conta {
     }
 
     public void atualizaSaldoRendimento(double valor, Conta c1) {
-        c1.depositar(valor + valor*txCorrecao);
+        c1.depositar(valor + valor * txCorrecao);
     }
 
     public void abrirConta() {
 
     }
 
-    public ContaPoupanca(Pessoa cliente, int nrConta, double saldo, double txCorrecao) {
-        super(cliente, nrConta, saldo);
+    public ContaPoupanca(Pessoa cliente, int nrConta, double saldo, double txCorrecao, String tipoConta) {
+        super(cliente, nrConta, saldo, tipoConta);
         this.txCorrecao = txCorrecao;
     }
 }

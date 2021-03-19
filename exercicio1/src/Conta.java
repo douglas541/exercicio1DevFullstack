@@ -2,6 +2,7 @@ public class Conta {
     private Pessoa cliente;
     private int nrConta;
     private double saldo;
+    private String tipoConta;
 
     public Pessoa getCliente() {
         return cliente;
@@ -55,9 +56,10 @@ public class Conta {
             System.out.println("Não tem saldo disponível!");
     }
 
-    public Conta(Pessoa cliente, int nrConta, double saldo) {
+    public Conta(Pessoa cliente, int nrConta, double saldo, String tipoConta) {
         this.cliente = cliente;
         this.nrConta = nrConta;
         this.saldo = saldo;
+        this.tipoConta = tipoConta;
     }
 }
